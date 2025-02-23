@@ -1,7 +1,3 @@
-Got it! Since your **Real_TimeChat_App** is built using **Vanilla JavaScript** (without React), here’s a simple and structured `README.md` file for your project.
-
----
-
 ### **📜 README.md Content**
 ```md
 # 📢 Real-Time Chat App
@@ -49,8 +45,9 @@ After starting the server, open your browser and go to:
 http://localhost:3000
 ```
 
-## 📸 Screenshots (Optional)
-_Add some UI screenshots here._
+## 📸 Screenshot 
+![image](https://github.com/user-attachments/assets/b8093dc0-99ac-47b0-afe1-6ace59454662)
+
 
 ## 🎯 Future Enhancements
 - ✅ Typing indicators
