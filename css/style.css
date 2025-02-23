@@ -1,0 +1,146 @@
+:root {
+    --primary-bg: linear-gradient(135deg, rgb(24, 0, 31) 0%, rgb(105, 30, 128) 100%);
+    --message-bg: rgba(255, 255, 255, 0.1);
+    --ai-message-bg: rgba(216, 180, 254, 0.2);
+    --border-radius: 12px;
+    --spacing: 1rem;
+    --auth-bg: rgba(0, 0, 0, 0.8);
+    --auth-accent: #d8b4fe;
+  }
+  
+  body {
+    min-height: 100vh;
+    background: var(--primary-bg);
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .logo {
+    display: block;
+    margin: 1.5rem auto;
+    width: 100px;
+    height: 60px;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+  }
+  
+  .container {
+    max-width: 1200px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    margin: 1rem auto;
+    height: 65vh;
+    border-radius: var(--border-radius);
+    padding: var(--spacing);
+    overflow-y: auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  .container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+  
+  .message {
+    background: var(--message-bg);
+    max-width: 70%;
+    padding: 0.8rem 1.2rem;
+    margin: 0.5rem;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(5px);
+    position: relative;
+    animation: messageAppear 0.3s ease-out;
+  }
+  
+  .message.ai {
+    background: var(--ai-message-bg);
+    border: 1px solid rgba(216, 180, 254, 0.3);
+  }
+  
+  .message.left {
+    margin-right: auto;
+    border-top-left-radius: 4px;
+  }
+  
+  .message.right {
+    margin-left: auto;
+    border-top-right-radius: 4px;
+  }
+  
+  .message::after {
+    content: attr(data-time);
+    display: block;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 0.4rem;
+  }
+  
+  #send-container {
+    max-width: 1200px;
+    margin: 1rem auto;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0 var(--spacing);
+  }
+  
+  #messageInp {
+    flex: 1;
+    padding: 0.8rem 1.2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  #messageInp:focus {
+    outline: none;
+    border-color: rgba(216, 180, 254, 0.5);
+    box-shadow: 0 0 8px rgba(216, 180, 254, 0.2);
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    background: rgba(216, 180, 254, 0.8);
+    border: none;
+    border-radius: var(--border-radius);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .btn:hover {
+    background: rgba(216, 180, 254, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes messageAppear {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .bot-message {
+    background: linear-gradient(135deg, #1e88e5, #64b5f6);
+    color: white;
+    font-weight: bold;
+  }
+  
+  

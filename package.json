@@ -1,0 +1,23 @@
+{
+  "name": "msg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuhammadTalhakhan2003/Message.git"
+  },
+  "author": "Muhammad Talha Khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MuhammadTalhakhan2003/Message/issues"
+  },
+  "homepage": "https://github.com/MuhammadTalhakhan2003/Message#readme",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
